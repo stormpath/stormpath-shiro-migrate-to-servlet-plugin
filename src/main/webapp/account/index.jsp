@@ -37,7 +37,7 @@
 
     <p><a href="<c:url value="/home.jsp"/>">Return to the home page.</a></p>
 
-    <p><a href="<c:url value="/logout"/>">Log out.</a></p>
+    <p><a href="#" onclick="document.getElementById('logout_form').submit();return false;">Log out.</a></p>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://code.jquery.com/jquery.js"></script>
@@ -48,5 +48,8 @@
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
+
+    <form id="logout_form" action="<c:url value="/logout"/>" method="post"></form>
+
 </body>
 </html>

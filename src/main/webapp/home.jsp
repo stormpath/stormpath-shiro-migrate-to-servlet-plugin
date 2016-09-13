@@ -42,7 +42,7 @@
 
         %>
         <c:out value="${account.givenName}"/></shiro:user>!
-        ( <shiro:user><a href="<c:url value="/logout"/>">Log out</a></shiro:user>
+        ( <shiro:user><a href="#" onclick="document.getElementById('logout_form').submit();return false;">Log out</a></shiro:user>
         <shiro:guest><a href="<c:url value="/login.jsp"/>">Log in</a></shiro:guest> )
     </p>
 
@@ -89,5 +89,8 @@
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
+
+    <form id="logout_form" action="<c:url value="/logout"/>" method="post"></form>
+
 </body>
 </html>
